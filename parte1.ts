@@ -7,4 +7,4 @@ let numero: string = "123b"
 let cidade: string = "São Paulo"
 let estado: string = "SP"
 
-alert(`Endereço: ${logradouro}, ${numero}. ${cidade}, ${estado} `) //string partnes ou interpolação de string. Isso já nao é exclusividade do TS pois já é nativo do JS
+console.log(`Endereço: ${logradouro}, ${numero}. ${cidade}, ${estado} `) //string partnes ou interpolação de string. Isso já nao é exclusividade do TS pois já é nativo do JS
