@@ -7,3 +7,7 @@ var numero = "123b";
 var cidade = "São Paulo";
 var estado = "SP";
 console.log("Endere\u00E7o: " + logradouro + ", " + numero + ". " + cidade + ", " + estado + " "); //string partnes ou interpolação de string. Isso já nao é exclusividade do TS pois já é nativo do JS
+var meuArray = [1, 2, 3, 4, 5]; //tipando array
+var meuArray2 = [6, 7, 8, 9, 10]; //tipando array método diamente que tem o mesmo efeito acima
+console.log(meuArray);
+console.log(meuArray2);
