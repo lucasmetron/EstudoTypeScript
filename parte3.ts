@@ -8,7 +8,7 @@ function funcaoTeste(): void {
 
 let teste2: void = funcaoTeste();
 
-let teste3: number = undefined; // por ser do tipo number, essa let não pode receber null nem undefined
+// let teste3: number = undefined; // por ser do tipo number, essa let não pode receber null nem undefined
 
 let teste4: null = null // por ser do tipo null, só pode reber null
 
