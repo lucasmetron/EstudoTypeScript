@@ -8,7 +8,7 @@ interface IAnimal { //Toda interface começa com I, por padrão
     morrer(): void,
 }
 
-class Animal implements IAnimal {
+class Animal implements IAnimal { //aqui implementamos a interface a classe
 
     // constructor() {
     //     this.nome = 'Elefante'  //(exemplo)
