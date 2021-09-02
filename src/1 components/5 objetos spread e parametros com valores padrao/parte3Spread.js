@@ -21,11 +21,11 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 };
 var primerioArray = [1, 2, 3];
 var segundoArray = [5, 6, 7];
-var arrayJuncao = __spreadArray(__spreadArray(__spreadArray([0], primerioArray, true), [4], false), segundoArray, true);
+var arrayJuncao = __spreadArray(__spreadArray(__spreadArray([0], primerioArray, true), [4], false), segundoArray, true); //nativo do JS 
 var meuObjetoSpread = {
     id: 1,
     nome: "treinaweb"
 };
-var novoObj = __assign(__assign({}, meuObjetoSpread), { idade: 5 });
+var novoObj = __assign(__assign({}, meuObjetoSpread), { idade: 5 }); //Melhoria do TS, não existe isso no JS
 console.log(arrayJuncao);
 console.log(novoObj);
