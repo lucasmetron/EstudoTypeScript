@@ -15,7 +15,8 @@ var meuObjeto = {
     nome: 'Treinaweb',
     idade: 10,
 };
-//TIPO DE DESCONSTRUÇÃO DE OBJETO JÁ É NATIVO DO JS
-var id = meuObjeto.id, meuNovoObjeto = __rest(meuObjeto, ["id"]); //chaves precisão exatas ao do obejto desconstuido
+var id = meuObjeto.id; // Este tipo de descontrução é nativo do JS
+var nome = meuObjeto.nome, novoObjeto = __rest(meuObjeto, ["nome"]); // A desconstrução do resto do objeto ainda não é nativa do JS, exclusiva do TS
 console.log(id);
-console.log(meuNovoObjeto);
+console.log(nome);
+console.log(novoObjeto);
