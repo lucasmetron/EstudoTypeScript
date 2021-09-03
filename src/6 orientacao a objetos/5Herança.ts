@@ -57,7 +57,7 @@ console.log(duck);
 duck.nascer();
 console.log(duck);
 duck.crescer()
-duck.nadar()
+duck.nadar() //método que só existe na classe duck que herda todos os outros atributos e métodos da calsse animal
 duck.morrer();
 console.log(duck.estaVivo = true);
 console.log(duck.estaVivo);

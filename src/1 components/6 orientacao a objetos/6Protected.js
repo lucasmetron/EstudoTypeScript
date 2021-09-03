@@ -14,14 +14,14 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var AnimallClass = /** @class */ (function () {
-    function AnimallClass(nome, idade) {
+var Animal1 = /** @class */ (function () {
+    function Animal1(nome, idade) {
         if (idade === void 0) { idade = 0; }
         this.nome = nome;
         this.idade = idade;
         this._estaVivo = false;
     }
-    Object.defineProperty(AnimallClass.prototype, "estaVivo", {
+    Object.defineProperty(Animal1.prototype, "estaVivo", {
         get: function () {
             return this._estaVivo;
         },
@@ -31,36 +31,42 @@ var AnimallClass = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
-    AnimallClass.prototype.nascer = function () {
+    Animal1.prototype.nascer = function () {
         this._estaVivo = true;
         console.log('Animal nasceu');
     };
-    AnimallClass.prototype.crescer = function () {
+    Animal1.prototype.crescer = function () {
         this.idade += 1;
         console.log('Animal cresceu');
     };
-    AnimallClass.prototype.morrer = function () {
+    Animal1.prototype.morrer = function () {
         this._estaVivo = false;
         console.log('Animal morreu');
     };
-    return AnimallClass;
+    return Animal1;
 }());
-var Duck = /** @class */ (function (_super) {
-    __extends(Duck, _super);
-    function Duck() {
-        return _super !== null && _super.apply(this, arguments) || this;
+var Peixe = /** @class */ (function (_super) {
+    __extends(Peixe, _super);
+    function Peixe() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this._quantidadeDeComida = 5;
+        return _this;
     }
-    Duck.prototype.nadar = function () {
-        console.log('o pato esta nadando...');
+    Peixe.prototype.nadar = function () {
+        if (this._quantidadeDeComida <= 3) {
+            console.log('o pato esta nadando...');
+        }
+        else {
+            console.log('morreu de tando comer');
+            this._estaVivo = false; //permite alterar este atributo de Animal1 pq _estaVivo é um atributo PROTECTED
+            console.log(this.estaVivo);
+        }
     };
-    return Duck;
-}(AnimallClass));
-var duck = new Duck('Cacau');
-console.log(duck);
-duck.nascer();
-console.log(duck);
-duck.crescer();
-duck.nadar(); //método que só existe na classe duck que herda todos os outros atributos e métodos da calsse animal
-duck.morrer();
-console.log(duck.estaVivo = true);
-console.log(duck.estaVivo);
+    return Peixe;
+}(Animal1));
+var peixe = new Peixe('Cacau');
+console.log(peixe);
+peixe.nascer();
+console.log(peixe);
+peixe.crescer();
+peixe.nadar(); //método que só existe na classe peixe que herda todos os outros atributos e métodos da calsse animal
