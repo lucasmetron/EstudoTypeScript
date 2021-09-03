@@ -8,14 +8,6 @@ interface IAnimal {
     morrer(): void,
 }
 
-interface IDevice {
-    id: number,
-    eui: string,
-    nome: string,
-    variable: string[],
-}
-
-
 class AnimalClass implements IAnimal {
 
     nome: string;
